@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width:960px;
+  height:480px;
+}
+body{
+  display:flex;
+  flex-direction: column;
+gap:20px;
+
+}
+.square{
+  box-sizing: border-box;
+  border: 1px solid black;
+  
+
+}
+.square:hover{
+  background-color:grey;
+}
