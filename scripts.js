@@ -37,8 +37,22 @@ container.append(square)
 square.onmouseover = function(event) {
     let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
   let target = event.target;
-  target.style.background = randomColor;
 
+  if(!target.style.background){
+
+  target.style.background = "black";
+
+target.style.opacity = 0;
+              target.style.background = randomColor;
+
+  }
+
+  let currentOpacity= Number(target.style.opacity);
+
+  if (currentOpacity<1){
+
+target.style.opacity = currentOpacity + 0.1;
+  }
 }
 }
 }
